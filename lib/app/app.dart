@@ -1,5 +1,11 @@
-import 'package:cardapio/apresentacao/pages/homepages.dart';
+import 'package:cardapio/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
+final moeda = NumberFormat.currency(
+  locale: "pt_BR",
+  symbol: "R\$"
+);
 
 class Aplicacao extends StatelessWidget {
   const Aplicacao({super.key});
@@ -7,11 +13,15 @@ class Aplicacao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Cardápio",
+      title: "Meu Cardápio",
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.deepOrange,
       ),
-      home: const HomePage(),
+
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const HomePage(),
+      },
     );
   }
 }
