@@ -21,14 +21,23 @@ class HomePage extends StatelessWidget {
         separatorBuilder: (context, index) => const Divider(), //DIVIDER SEPARA
 
         itemCount: lanches.length,
-        itemBuilder: (context, index) => Padding( //COMO MOSTRA O ITEM NA TELA
-          padding: const EdgeInsets.all(8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(lanches[index].nome),
-              Text(moeda.format(lanches[index].preco)),
-            ],
+        itemBuilder: (context, index) => GestureDetector( // PODE DEIXAR CLICAR - TAXAR
+          onTap: (){ //DESPARA ENVENTO DE CLIC
+            Navigator.pushNamed(
+              context,
+              "/lanche",
+              arguments: lanches[index],
+            );
+          },
+          child: Padding( //COMO MOSTRA O ITEM NA TELA
+            padding: const EdgeInsets.all(8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(lanches[index].nome),
+                Text(moeda.format(lanches[index].preco)),
+              ],
+            ),
           ),
         ),
       ),
