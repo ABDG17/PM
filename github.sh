@@ -8,7 +8,7 @@ export repositorio="https://github.com/A-Beatriz-BIA/PM.git";
 
 #Daqui pra baixo mexa somente se for realmente necessário ou se souber o que está fazendo :P
 
-export branch_name="atividadeCardapio"
+export branch_name="atividadeAgenda-$(date -I)"
 
 #add linux, mac and windows folders to gitignore
 echo "" >> .gitignore
