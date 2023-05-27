@@ -11,7 +11,7 @@ class Aplicacao extends StatelessWidget {
     return MaterialApp(
       title: "Agenda",
       theme: ThemeData(
-        primarySwatch: Colors.pink,       
+        primarySwatch: Colors.purple,       
       ),
 
       initialRoute: "/",

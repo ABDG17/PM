@@ -14,7 +14,7 @@ class ContatoPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(contato.nome),
+        title: const Text("Contato"),
       ),
 
       body: Padding(
@@ -30,9 +30,10 @@ class ContatoPage extends StatelessWidget {
 
               Container(
                 margin: const EdgeInsets.only(top:10, bottom: 10),
-                child: Row(
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
+                    children: [
+                    //Align(alignment: Alignment.centerLeft, child: Text(contato.nome, style: theme.textTheme.headline6,)), - ALINHAMENTO A ESQUERDA
                     Text(contato.nome, style: theme.textTheme.headline6,),
                     Text(contato.telefone, style: theme.textTheme.headline6,),
                     Text(contato.email, style: theme.textTheme.headline6,),
